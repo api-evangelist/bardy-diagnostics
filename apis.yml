@@ -1,23 +1,73 @@
 aid: bardy-diagnostics
+
 name: Bardy Diagnostics
-description: 'Bardy Diagnostics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.bardydx.com/wp-content/uploads/2024/12/BDx-Remote-Monitoring.png
+
+description: 'Bardy Diagnostics provides ambulatory ECG monitoring solutions, including the CAM Patch and BDxCONNECT platforms, enabling continuous cardiac rhythm tracking for patients and clinicians. The company focuses on remote cardiac diagnostics, offering detailed reports, arrhythmia detection, and integration with healthcare professional workflows. As part of Baxter’s portfolio, Bardy Diagnostics delivers innovative, FDA‑cleared technologies for real‑time cardiac monitoring and data analytics.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bardy-diagnostics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- Cardiology
+- Diagnostics
+- RemoteMonitoring
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bardy-diagnostics-hosts.yml
+- type: Vendors
+  url: vendors/bardy-diagnostics-vendors.yml
+- type: DomainSecurity
+  url: security/bardy-diagnostics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/bardy-diagnostics_stock/
+  url: https://www.bardydx.com
+
+- type: PrivacyPolicy
+  url: https://www.bardydx.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.bardydx.com/terms-conditions/
+- type: Support
+  url: https://www.bardydx.com/support/
+- type: Contact
+  url: https://www.bardydx.com/contact/
+- type: Solutions
+  url: https://www.bardydx.com/solutions/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract was found at common API endpoints.
+  evidence:
+    - url: https://api.bardydx.com/openapi.json
+      status: dns_error
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
